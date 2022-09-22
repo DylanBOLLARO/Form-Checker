@@ -1,0 +1,180 @@
+@font-face {
+    font-family: "OldLondon";
+    src: url("../../Fonts/OldLondon.ttf");
+  }
+  
+ $font1: 'OldLondon', sans-serif; 
+
+* {
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    color: rgb(82, 82, 82);
+}
+
+#security span {
+    display: inline;
+    }
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(138, 138, 138);
+}
+
+form {
+    width: 50%;
+    min-width: 430px;
+    max-width: 600px;
+    background: #333;
+    display: grid;
+    grid-template-rows: repeat(4, 120px);
+    padding: 60px 45px 30px;
+    border-radius: 16px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+    position: relative;
+
+    .confirm-container{
+        margin: 15px 0;
+
+    }
+
+    .password-container{
+        .alignPass{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+                           
+                input[type=checkbox]{ 
+                border: 2px solid red;
+                height: 25px;
+                width: 25px;
+                margin-left: 20px;
+                display: none;
+
+            }
+            label{
+                img{
+                    margin-left: 20px;
+                    height: 50px;
+                    width: 50px;
+                }
+            }
+        }
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        border-radius: 150px;
+        background: linear-gradient(65deg, #aaff00, #00fff7 80%);
+        top: -30px;
+        left: 50%;
+        transform: translateX(-50%);
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+        
+        }
+        
+    .error input {
+        color: rgb(255, 72, 72);
+        border: 1px solid rgba(255, 0, 0, 0.527);
+        }
+        
+        .error span {
+        visibility: visible;
+        opacity: 1;
+        color: rgb(255, 72, 72);
+        }
+
+    div {
+        transition: 0.2s;
+
+        label {
+            letter-spacing: 3px;
+            color: whitesmoke;
+            font-family: $font1;
+            font-size: 2rem;
+            }
+            
+            input[type="text"], input[type="password"] {
+            margin: 7px 0 7px;
+            border: 1px solid transparent;
+            background: rgb(235, 244, 242);
+            height: 36px;
+            width: 100%;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+            border-radius: 9px;
+            font-size: 1.1rem;
+            padding-left: 10px;
+            transition: 0.2s;
+            }
+            
+            input[type="text"]:focus, input[type="password"]:focus {
+            border: 1px solid #0080e2;
+            }
+            
+            span {
+            margin-bottom: 20px;
+            display: block;
+            font-size: 0.8rem;
+            visibility: hidden;
+            opacity: 0;
+            transition: 0.3s;
+            color: red;
+            }
+            
+            p {
+            background: red;
+            width: 33%;
+            height: 6px;
+            margin: -2px 0 2px;
+            border-radius: 50px;
+            visibility: hidden;
+            transition: 0.3s;
+        }
+
+        .progressRed {
+        background: red;
+        width: 33%;
+        visibility: visible;
+        }
+        
+        .progressBlue {
+        background: #16d9e7;
+        width: 67%;
+        visibility: visible;
+        }
+        
+        .progressGreen {
+        width: 100%;
+        background: #5ef9a4;
+        visibility: visible;
+        }
+    }
+
+
+    input[type="submit"] {
+        border: none;
+        background: linear-gradient(65deg, #aaff00, #00fff7 80%);
+        width: 50%;
+        margin: 12px auto 0;
+        padding: 10px;
+        border-radius: 150px;
+        font-size: 1.2rem;
+        box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+        transition: 0.3s ease;
+        }
+       
+        input[type="submit"]:hover {
+        filter: brightness(105%);
+        transform: translateX(2px);
+        }
+}
+
